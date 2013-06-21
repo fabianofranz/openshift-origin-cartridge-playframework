@@ -8,12 +8,6 @@ function start {
     $OPENSHIFT_PLAYFRAMEWORK_DIR/template/target/start -Dhttp.port=$OPENSHIFT_PLAYFRAMEWORK_PORT -Dhttp.address=$OPENSHIFT_PLAYFRAMEWORK_IP
 }
 
-function stop {
-}
-
-function restart {
-}
-
 function catchall {
     echo "not yet implemented"
 }
@@ -21,9 +15,9 @@ function catchall {
 # Handle commands.
 case "$1" in
   start)       start ;;
-  stop)        stop ;;
-  restart)     restart ;;
-  status)      status ;;
+  stop)        catchall ;;
+  restart)     catchall ;;
+  status)      catchall ;;
   reload)      catchall ;;
   tidy)        catchall ;;
   pre-build)   catchall ;;
